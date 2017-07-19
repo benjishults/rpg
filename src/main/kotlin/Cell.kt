@@ -12,6 +12,10 @@ class Cell(var objs: MutableList<Entity> = mutableListOf(), val walls: Array<Dir
 			throw IllegalStateException("${entity.beginSentence()} bump${if (entity.person() == 3) "s" else ""} into an invisible wall!")
 		return this
 	}
+    
+    fun display() : String {
+        return "."
+    }
 
 	fun report(direction: Direction): String {
 		return """
